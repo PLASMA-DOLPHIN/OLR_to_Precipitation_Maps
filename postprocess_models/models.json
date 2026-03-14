@@ -1,0 +1,14 @@
+{
+  "models": [
+    "poly2_ridge",
+    "hgb",
+    "mlp"
+  ],
+  "checkpoint": "checkpoints/best.pth",
+  "train_years": [
+    "2023",
+    "2024"
+  ],
+  "clamp_min": null,
+  "clamp_max": null
+}
