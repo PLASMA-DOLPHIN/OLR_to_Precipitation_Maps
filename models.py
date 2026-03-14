@@ -199,7 +199,7 @@ def train():
     """Run training - can be called from models.py or train.py"""
     # Import here to avoid circular imports
     from dataset import RainDataset
-    from train_0 import Trainer
+    from train import Trainer
     import config
     from torch.utils.data import DataLoader
     
