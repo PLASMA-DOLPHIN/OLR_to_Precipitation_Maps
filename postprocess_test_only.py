@@ -78,7 +78,7 @@ def resolve_checkpoint(path: str) -> str:
         candidates.append(path)
     if hasattr(config, "CHECKPOINT_DIR"):
         candidates.append(os.path.join(config.CHECKPOINT_DIR, "best.pth"))
-        candidates.append(os.path.join(config.CHECKPOINT_DIR, "latest.pth"))
+        # candidates.append(os.path.join(config.CHECKPOINT_DIR, "latest.pth"))
     candidates.extend([
         os.path.join("checkpoints", "best.pth")
         # os.path.join("checkpoints", "latest.pth")
