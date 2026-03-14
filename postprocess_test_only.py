@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader
 import joblib
 
 from dataset import RainDataset
-from models_0 import UNetGenerator
+from models import UNetGenerator
 import config
 
 
