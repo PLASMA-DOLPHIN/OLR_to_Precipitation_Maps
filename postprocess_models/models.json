@@ -1,8 +1,6 @@
 {
   "models": [
-    "poly2_ridge",
-    "hgb",
-    "mlp"
+    "hgb"
   ],
   "checkpoint": "checkpoints/best.pth",
   "train_years": [
