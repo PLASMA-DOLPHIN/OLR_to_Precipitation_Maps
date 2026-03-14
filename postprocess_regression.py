@@ -23,7 +23,7 @@ from sklearn.svm import SVR
 from sklearn.neural_network import MLPRegressor
 
 from dataset import RainDataset
-from models_0 import UNetGenerator
+from models import UNetGenerator
 import config
 
 
@@ -159,34 +159,11 @@ def collect_training_pairs(
 
 def build_models() -> Dict[str, Pipeline]:
     models = {
-        "poly2_ridge": Pipeline([
-            ("scaler", StandardScaler()),
-            ("poly", PolynomialFeatures(degree=2, include_bias=False)),
-            ("ridge", Ridge(alpha=1.0)),
-        ]),
+
         "hgb": Pipeline([
             ("scaler", StandardScaler()),
             ("hgb", HistGradientBoostingRegressor(
                 max_iter=200, learning_rate=0.1, max_depth=8, random_state=42
-            )),
-        ]),
-        "rf": Pipeline([
-            ("scaler", StandardScaler()),
-            ("rf", RandomForestRegressor(
-                n_estimators=150, max_depth=20, random_state=42, n_jobs=-1
-            )),
-        ]),
-        "svr_rbf": Pipeline([
-            ("scaler", StandardScaler()),
-            ("svr", SVR(C=50.0, gamma="scale")),
-        ]),
-        "mlp": Pipeline([
-            ("scaler", StandardScaler()),
-            ("mlp", MLPRegressor(
-                hidden_layer_sizes=(128, 64),
-                max_iter=250,
-                random_state=42,
-                early_stopping=True
             )),
         ]),
     }
