@@ -3,8 +3,8 @@ import os
 from datetime import datetime
 
 # === INPUT FOLDERS ===
-olr_folder = "/Users/naveenvidin/MCS/ML/RainGAN/data/olr/2023"
-rain_folder = "/Users/naveenvidin/MCS/ML/RainGAN/data/precip/cropped_npz_chirps23"
+olr_folder = "/data/olr/2023"
+rain_folder = "/data/precip/cropped_npz_chirps23"
 
 # === OUTPUT FOLDERS ===
 output_olr_folder = "data/processed_olr/2023"
