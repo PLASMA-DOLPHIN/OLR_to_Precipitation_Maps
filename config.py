@@ -26,7 +26,7 @@ LR_DECAY_GAMMA = 0.5  # Multiply LR by this factor
 GRAD_CLIP = 1.0
 
 # Checkpointing
-CHECKPOINT_DIR = "checkpoints-1"
+CHECKPOINT_DIR = "checkpoints"
 CHECKPOINT_INTERVAL = 10  # Save checkpoint every N epochs
 
 # Data loading
