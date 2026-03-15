@@ -57,4 +57,21 @@ After activating the environment, run the training script:
 
 run the postprocess_test_only.py for results (set the argument --metric-max <threshold number in mm/day> to set a rainfall threshold)
 
-Make sure the dataset files are placed inside the data/ directory before running the training script.
+
+#####
+Large Files Notice
+This repository uses Git Large File Storage (Git LFS) to manage large files such as model weights (.pth) and datasets.
+
+If you download the repository as a ZIP from GitHub, you will only receive Git LFS pointer files instead of the actual large files.
+
+To correctly obtain all required files, please clone the repository using Git with Git LFS installed:
+
+git lfs install
+git clone <repo-url>
+
+
+If you have already cloned the repository but the large files appear as small text pointer files, run:
+
+git lfs pull
+
+If you cannot use Git LFS, you will need to manually download the large files from the repository and place them in the appropriate directories.
